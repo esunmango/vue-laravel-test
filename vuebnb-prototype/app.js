@@ -30,7 +30,10 @@ var app = new Vue({
         }
     },
     created : function () {
-        document.addEventListener('keyup',escapeKeyListener)
+        document.addEventListener('keyup',escapeKeyListener);
+    },
+    destroy : function () {
+        document.removeEventListener('keyup',this.escapeKeyListener);
     }
 });
 
